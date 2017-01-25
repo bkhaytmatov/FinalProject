@@ -1,0 +1,21 @@
+﻿@model List<DBSD.Services.ProductProperties>
+@{
+    ViewBag.Title = "EditProduct";
+}
+<!--For for edition of product-->
+<div class="heading">
+    <p>EditProduct</p>
+</div>
+@foreach (var t in Model)
+{
+<form method="POST" action="/Admin/Edit">
+    <table>
+        <tr><td colspan="2"><input type="hidden" name="productId" value="@t.ProductId" /></td></tr>
+        <tr><td>Product Name:</td><td><input type="text" name="productName" value="@t.ProductName" /></td></tr>
+        <tr><td>Description:</td><td><input type="text" name="productDescription" value="@t.ProductDescription" /></td></tr>
+        <tr><td>Quantity:</td><td><input type="text" name="productQuantity" value="@t.ProductQuantity" /></td></tr>
+        <tr><td>Price:</td><td><input type="text" name="productPrice" value="@t.ProductPrice" /></td></tr>
+        <tr><td colspan="2"><input type="submit" value="Send" /></td></tr>
+    </table>
+</form>
+}

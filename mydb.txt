@@ -1,0 +1,57 @@
+Create table Orders (
+OrderId decimal identity,
+ProductId decimal NOT NULL,
+UserId decimal NOT NULL,
+OrderTime varchar(150),
+OrderStatus varchar(50),
+constraint OrderIdPk PRIMARY KEY (OrderId), 
+constraint ProductFK FOREIGN KEY(ProductId) references Products(ProductId),
+constraint UserFK FOREIGN KEY(UserId) references Users(UserId)
+)
+Select * from Orders
+
+Create table Products(
+ProductId decimal identity,
+ProductName varchar (10),
+ProductDescription varchar(1000),
+ProductPrice int,
+ProductQuantity int
+constraint ProductPK PRIMARY KEY (ProductId)
+)
+
+Create table Users (
+UserId decimal identity,
+FirstName varchar(20),
+LastName varchar(20),
+Email varchar (20),
+Phone varchar (20),
+Token varchar (150),
+UserName varchar (20),
+UserPassword varchar (20),
+constraint UserPK PRIMARY KEY (UserId)
+)
+Select FirstName from Users Where UserName='bob77'
+Select * from Users
+insert into Products values ('Antoccino', 'An antoccino is a single shot of', 8, 20)
+
+Select * from Products
+
+Insert into Users VALUES ('Bob','Khaytmatov','bob@khaytmatov.com',6845135168, 'sdhfkhfjdkasd', 'bob77', '123456789')
+
+Create table Orders (
+OrderId decimal identity,
+ProductId decimal NOT NULL,
+UserId decimal NOT NULL,
+OrderTime Datetime,
+OrderStatus varchar(5),
+constraint OrderIdPk PRIMARY KEY (OrderId), 
+constraint ProductFK FOREIGN KEY(ProductId) references Products(ProductId),
+constraint UserFK FOREIGN KEY(UserId) references Users(UserId)
+)
+
+
+o.ProductId, o.UserId, o.OrderId,o.OrderTime, p.ProductId, p.ProductName, p.ProductDescription, p.ProductPrice
+
+Select distinct o.ProductId, o.UserId, o.OrderId,o.OrderTime, p.ProductId, p.ProductName, p.ProductDescription, p.ProductPrice
+FROM Orders o, Products p,  Users u 
+Where p.ProductId = o.ProductId and o.OrderStatus='Incomplete' and o.UserId=7

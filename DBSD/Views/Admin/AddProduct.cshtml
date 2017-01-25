@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "AddProduct";
+}
+<!-- Add product form-->
+<div class="heading">
+    <p>AddProduct</p>
+    </div>
+    <form method="POST" action="/Admin/AddProduct">
+        <table>
+            <tr><td>Product name:</td><td><input type="text" name="productName" /></td></tr>
+            <tr><td>Product description:</td><td><input type="text" name="productDescription" /></td></tr>
+            <tr><td>Price:</td><td><input type="text" name="productPrice" /></td></tr>
+            <tr><td>Quantity:</td><td><input type="text" name="productQuantity" /></td></tr>
+           
+            <tr><td colspan="2"><input type="submit" value="Send" /></td></tr>
+        </table>
+</form>
+

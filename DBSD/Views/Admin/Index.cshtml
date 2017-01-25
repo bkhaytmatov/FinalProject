@@ -1,0 +1,29 @@
+﻿@model DBSD.Services.UserProperties
+@{
+    ViewBag.Title = "Index";
+}
+<!-- Main page for Admin, with respective links for Adding of product, See all products and Sign out-->
+
+<div class="heading">
+    Hello, Admin, @Model.UserName! <br />
+</div>
+
+<hr style="border-color: #e25d29" />
+<div class="container">
+
+    
+    @Html.ActionLink("Add New Product", "AddNewProduct", "Admin", new { area = "" }, new { @class = "navbar-brand" })
+   
+    @Html.ActionLink("Show All Products", "GetProducts", "Admin", new { area = "" }, new { @class = "navbar-brand" })
+    
+    @Html.ActionLink("Sign Out", "LogOut", "Home", new { area = "" }, new { @class = "navbar-brand" })
+</div>
+
+
+
+
+
+
+
+
+

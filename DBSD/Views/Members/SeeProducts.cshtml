@@ -1,0 +1,19 @@
+﻿@model List<DBSD.Services.ProductProperties>
+@{
+    ViewBag.Title = "SeeProducts";
+}
+<!-- Products page for members -->
+<div class="heading">
+    <p>Please choose products Products</p>
+    </div>
+    @foreach (var i in Model)
+    {
+        <table>
+            <tr>
+                <td>@i.ProductName </td>
+                <td>@i.ProductDescription </td>
+                <td>$@i.ProductPrice </td>
+                <td>@Html.ActionLink("Order", "OrderProduct", "Members", new { id = i.ProductId }, new Object())</td>
+            </tr>
+        </table>
+    }

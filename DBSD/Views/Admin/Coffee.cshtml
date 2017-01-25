@@ -1,0 +1,20 @@
+﻿@model List<DBSD.Services.ProductProperties>
+@{
+    ViewBag.Title = "Coffee";
+}
+<!--Form for showing all products as guest -->
+<div class="heading">
+    <p>List of coffee:</p>
+</div>
+<hr style="border-color: #e25d29" />
+
+@foreach (var ct in Model)
+{
+    <table>
+        <tr>
+            <td>@ct.ProductName</td>
+            <td>@ct.ProductDescription</td>
+            <td>$@ct.ProductPrice</td>
+            </tr>
+    </table>
+}

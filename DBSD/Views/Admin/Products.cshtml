@@ -1,0 +1,23 @@
+﻿@model List <DBSD.Services.ProductProperties>
+@{
+    ViewBag.Title = "Products";
+}
+<!--Page for showing all products in a table-->
+<div class="heading">
+    <p>Products</p>
+    </div>
+    @foreach (var ct in Model)
+    {
+        <table>
+            <tr>
+                <td>@ct.ProductId</td>
+                <td>@ct.ProductName</td>
+                <td>@ct.ProductDescription</td>
+                <td>@ct.ProductQuantity</td>
+                <td>@ct.ProductPrice</td>
+                <td class="td"><b>@Html.ActionLink("Edit", "EditProduct", "Admin", new { id = ct.ProductId }, new Object()) </b></td>
+                <td class="td">@Html.ActionLink("Delete", "ConfirmDelete", "Admin", new { id = ct.ProductId }, new Object())</td>
+            </tr>
+        </table>
+    }
+

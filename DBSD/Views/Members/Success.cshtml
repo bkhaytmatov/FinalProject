@@ -1,0 +1,26 @@
+﻿@model List <DBSD.Services.OrderDetails>
+@{
+    ViewBag.Title = "Success";
+}
+<!-- successfull summary of the order -->
+<div class="heading">
+    <p>Success</p>
+    </div>
+    Dear customer, your order has been successfully placed, here are the details: <br />
+    @foreach (var i in Model)
+    {
+        <table>
+            <tr><td>Order number: </td><td>@i.OrderId </td></tr>
+            <tr><td>Order time: </td><td>@i.OrderTime</td></tr>
+            <tr><td>Product name: </td><td>@i.PProductName </td></tr>
+            <tr><td>Product description: </td><td>@i.PProductDescription</td> </tr>
+            <tr><td>Product price: </td><td>@i.PProductPrice</td> </tr>
+        </table>
+        
+        
+    }
+    @Html.ActionLink("Place order!", "CompleteOrder", "Members")
+
+
+
+

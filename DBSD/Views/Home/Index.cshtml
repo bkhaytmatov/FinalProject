@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<!-- Main page for guests of website, with top products showed, Login and Register links presented-->
+<hr style="border-color: #e25d29" />
+<div class="container">
+
+@Html.ActionLink("LOGIN", "LoginView", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+@Html.ActionLink("REGISTER", "RegisterUser", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    </div>
+<div class="heading">
+    <p>What's New</p>
+</div>
+<center>
+
+    <table>
+        <tr>
+            <td>
+
+                <div class="pic">
+                    <p><img src="~/images/Caffè Americano.jpg"></p>
+
+                    <p>Caffe Americano</p>
+
+                </div>
+            </td>
+            <td>
+                <div class="pic">
+                    <p> <img src="~/images/Espresso Romano.jpg"></p>
+                    <p>Esperesso Romano</p>
+
+                </div>
+            </td>
+            <td>
+                <div class="pic">
+                    <p><img src="~/images/Antoccino.jpg"></p>
+                    <p>Antoccino</p>
+                </div>
+            </td>
+            <td>
+                <div class="pic">
+                    <p> <img src="~/images/Café bombón.jpg"></p>
+                    <p>Café bombón</p>
+
+                </div>
+            </td>
+
+        </tr>
+
+    </table>
+    <hr style="border:thin">
+
+    <div class="heading">
+        <p>Top Rated</p>
+    </div>
+
+
+    <table class="tables">
+        <tr>
+            <td>
+                <div class="pic1">
+                    <p><img src="~/images/Cappuccino.jpg"></p>
+                    <p>Cappuccino</p>
+                </div>
+            </td>
+            <td>
+                <div class="pic1">
+                    <p><img src="~/images/Latte.jpg"></p>
+                    <p>Latte</p>
+                </div>
+            </td>
+            <td>
+                <div class="pic1">
+                    <p><img src="~/images/Flat white.jpg"></p>
+                    <p>Flat White</p>
+                </div>
+            </td>
+            <td>
+                <div class="pic1">
+                    <p> <img src="~/images/Macchiato.jpg"></p>
+                    <p>Macchiato</p>
+                </div>
+            </td>
+
+
+        </tr>
+
+    </table>
+
+    <hr style="border:thin">
+</center>
+
+
+
+
+
+    

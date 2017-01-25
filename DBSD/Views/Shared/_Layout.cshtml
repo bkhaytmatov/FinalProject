@@ -1,0 +1,52 @@
+﻿<!-- Main Layout page with menubar and footer -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - CAFE ON GO</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/animate.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/styles.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/demo.css" />
+    <!-- jQuery lib from google server ===================== -->
+    <script src="~/scripts/login.js"></script>
+    <script src="~/scripts/jquery-1.7.2.min.js"></script>
+    <script src="~/scripts/mobilebar.js"></script>
+  
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">       
+        <div class="container">
+             <div class="navbar-header">
+               
+                @Html.ActionLink("CAFE ON GO", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" }) 
+
+                 @Html.ActionLink("ABOUT US", "About", "Home", new { area = "" }, new { @class = "navbar-brand" })                  
+                 
+                 @Html.ActionLink("COFFEE", "GetJustProducts", "Admin", new { area = "" }, new { @class = "navbar-brand" })
+                  
+                 @Html.ActionLink("CONTACT US", "Contact", "Home", new { area = "" }, new { @class = "navbar-brand" })
+           
+            </div>
+            </div>
+        </div>
+    <img src="~/images/organic_1.jpg" width="100%" height="200">
+
+    <div class="container body-content" width="100%">
+        <!-- The render body where Home/Admin/Member components ar fitting-->
+        @RenderBody()
+        <hr style="border-color: #e25d29" />
+        <footer>
+            <p>&copy; @DateTime.Now.Year Copyright © CQUniversity Sydney Australia. All Rights Reserved by CQU students: Bobir Khaytmatov, Rifat Ahmed and Haoda Zhang.</p>
+            <br/>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
